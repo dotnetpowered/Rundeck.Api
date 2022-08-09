@@ -77,5 +77,8 @@ namespace Rundeck.Api.Models
 
 		[DataMember(Name = "successfulNodes")]
 		public IList<string> SuccessfulNodes { get; set; } = default!;
+
+		[DataMember(Name = "failedNodes")]
+		public IList<string> FailedNodes { get; set; } = default!;
 	}
 }
