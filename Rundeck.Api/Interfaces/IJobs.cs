@@ -95,6 +95,18 @@ namespace Rundeck.Api.Interfaces
 			CancellationToken cancellationToken = default);
 
 		/// <summary>
+		/// Get Job Executions
+		/// </summary>
+		/// /// <param name="id"></param>
+		/// /// <param name="offset"></param>
+		/// /// <param name="max"></param>
+		/// <param name="cancellationToken"></param>
+		[Get("/job/{id}/executions?offset={offset}&max={max}")]
+		Task<JobExecutionsListingResult> GetExecutionsAsync(
+			string id, int offset, int max,
+			CancellationToken cancellationToken = default);
+
+		/// <summary>
 		/// Execute a job
 		/// </summary>
 		/// <param name="id"></param>
